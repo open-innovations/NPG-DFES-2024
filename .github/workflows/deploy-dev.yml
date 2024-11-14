@@ -22,11 +22,7 @@ jobs:
 
       - name: Deploy the site to bytemark
         run: |
-          rsync --info=STATS2 --recursive --delete \
-            --rsh=\"sshpass -e ssh -o StrictHostKeyChecking=no -l $SSH_USER\" \
-            --rsync-path \"sudo -u www-data rsync\" \
-            --exclude '.git' --exclude '.gitignore' \
-            ./ cloud.open-innovations.org:/mnt/data/dev/npg-dfes-2024/
+          rsync --info=STATS2 --recursive --delete --rsh=\"sshpass -e ssh -o StrictHostKeyChecking=no -l $SSH_USER\" --rsync-path \"sudo -u www-data rsync\" --exclude '.git' --exclude '.gitignore' ./ cloud.open-innovations.org:/mnt/data/dev/npg-dfes-2024/
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSHPASS: ${{ secrets.SSH_PASS }}
