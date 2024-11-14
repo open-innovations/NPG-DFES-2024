@@ -1,0 +1,32 @@
+# Pre-requisites
+#
+# You need either to have set the following environment secrets:
+#
+# SSH_USER - user for deployment
+# SSH_PASS - password for the user
+
+name: Deploy dev version
+
+"on":
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+jobs:
+  # Build job
+  dev-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy the site to bytemark
+        run: |
+          rsync --info=STATS2 --recursive --delete \
+            --rsh=\"sshpass -e ssh -o StrictHostKeyChecking=no -l $SSH_USER\" \
+            --rsync-path \"sudo -u www-data rsync\" \
+            --exclude '.git' --exclude '.gitignore' \
+            ./ cloud.open-innovations.org:/mnt/data/dev/npg-dfes-2024/
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSHPASS: ${{ secrets.SSH_PASS }}
