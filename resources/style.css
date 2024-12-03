@@ -273,17 +273,9 @@ ul.grid li.img iframe { width: 100%; height: 204px; margin-bottom: 0px!important
 	background:rgba(0,0,0,0.1);
 	height:100%;
 }
-.glory .holder {
-	display: block;
-	text-align:center;
-	position: relative;
-	height: 100%;
-}
-.glory img {
-	margin:auto;
-	width: 250px;
-	height: auto;
-}
+.glory .logos { padding: 1rem; display: flex; justify-content: center; gap: 1rem; position: relative; }
+.glory .logos a { display: inline-block; line-height: 0; }
+.logos img { height: 64px; width: unset; }
 body.front .glory img {
 	width: 500px;
 	left: 50%;
