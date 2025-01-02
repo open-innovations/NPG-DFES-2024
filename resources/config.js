@@ -44,7 +44,7 @@ OI.ready(function(){
 			"key": "2022",
 			"parameter": "ev",
 			"scale": "relative",
-			"years": {"min":2022, "max":2050},
+			"years": {"min":2023, "max":2050},
 			"map": {
 				"bounds": [[52.6497,-5.5151],[56.01680,2.35107]],
 				"attribution": "Vis: <a href=\"https://open-innovations.org/projects/\">Open Innovations</a>, Data: NPG/Element Energy"
