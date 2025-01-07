@@ -2,14 +2,13 @@
 
 ## Defining graphs
 
-The graphs are defined in [index.json](index.json). This consists of an ordered array of objects where each object is of the form:
+The graphs are defined in [index.json](index.json). This consists of an ordered array of objects representing sections. Each section can have a `title`, and `intro` and `graphs`. Each `graphs` is an array of objects of the form:
 
 ```javascript
 {
 	"title": "Annual carbon emissions (MtCO2)",
 	"csv":"AnnualCarbonEmissions_MtCO2.csv",
 	"svg":"graph-annual-co2-emissions.svg",
-	"table":"graph-annual-co2-emissions.html",
 	"yaxis-label": "Mt CO2(e)",
 	"left": 50
 }
@@ -19,7 +18,6 @@ where:
 * `title` is the title for the graph
 * `csv` is the relative path to the CSV file to use for this graph
 * `svg` is the output filename for the generated SVG (should end with .svg)
-* `table` is the output filename for the generated table (should end with .html)
 * `yaxis-label` is the label to use for the y-axis
 * `left` is a manual fudge factor to position the y-axis to deal with the fact the code can't easily calculate the lengths of the y-axis tick labels
 
