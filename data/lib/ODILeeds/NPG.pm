@@ -12,6 +12,8 @@ sub new {
     my $self = \%args;
  
     bless $self, $class;
+	
+	$self->{'flexible'} = "(without customer flexibility|ToUT)";
  
     return $self;
 }
@@ -170,10 +172,10 @@ sub draw {
 		$scenario = $self->{'scenariolookup'}[$s];
 		$safescenario = safeXML($scenario);
 		$t = $scenario;
-		$t =~ s/ \(.*\)//g;
-		$t =~ s/ Without Customer Flexibility//gi;
+		$t =~ s/[\(\)]//g;
+		$t =~ s/ $self->{'flexible'}//gi;
 		$path = "";
-		$svg .= "<g data-scenario=\"".($self->{'scenario-props'}{$t}{'css'}||safeID($scenario)).($scenario =~ /customer flexibility/i ? "-customer-flexibility":"")."\" class=\"data-series\">";
+		$svg .= "<g data-scenario=\"".($self->{'scenario-props'}{$t}{'css'}||safeID($scenario)).($scenario =~ /$self->{'flexible'}/i ? "-flexible":"")."\" class=\"data-series\">";
 		$circles = "";
 		for($y = $minyr; $y <= $maxyr; $y++){
 			if($self->{'scenarios'}{$scenario}{$y}){
@@ -186,7 +188,7 @@ sub draw {
 				}
 			}
 		}
-		$svg .= "\t<path d=\"$path\" id=\"$safescenario\" class=\"line".($scenario =~ /customer flexibility/i ? " dotted":"")."\" stroke=\"".($self->{'scenario-props'}{$t}{'color'}||"#cc0935")."\" stroke-width=\"$props{'stroke'}\" stroke-linecap=\"round\"><title>$safescenario</title></path>\n";
+		$svg .= "\t<path d=\"$path\" id=\"$safescenario\" class=\"line".($scenario =~ /$self->{'flexible'}/i ? " dotted":"")."\" stroke=\"".($self->{'scenario-props'}{$t}{'color'}||"#cc0935")."\" stroke-width=\"$props{'stroke'}\" stroke-linecap=\"round\"><title>$safescenario</title></path>\n";
 		$svg .= $circles;
 		$svg .= "</g>\n";
 	}
@@ -219,14 +221,14 @@ sub table {
 	$html .= "</tr>\n";
 	for($s = 0; $s < @{$self->{'scenariolookup'}}; $s++){
 		$scenario = $self->{'scenariolookup'}[$s];
-		$safescenario = safeXML($scenario).($scenario =~ /customer flexibility/i ? "&nbsp;-&nbsp;-&nbsp;-":"");
+		$safescenario = safeXML($scenario).($scenario =~ /$self->{'flexible'}/i ? "&nbsp;-&nbsp;-&nbsp;-":"");
 		$t = $scenario;
-		$t =~ s/ \(.*\)//g;
-		$t =~ s/ without customer flexibility//ig;
+		$t =~ s/[\(\)]//g;
+		$t =~ s/ $self->{'flexible'}//ig;
 
 		$c = ODILeeds::Colour->new('colour'=>($self->{'scenario-props'}{$t}{'color'}||"#cc0935"));
 
-		$html .= "<tr data-scenario=\"".($self->{'scenario-props'}{$t}{'css'}||safeID($scenario))."".($scenario =~ /customer flexibility/i ? "-customer-flexibility":"")."\"><td ".($self->{'scenario-props'}{$t}{'css'} ? "class=\"".$self->{'scenario-props'}{$t}{'css'}."\"" : "style=\"background-color:".($c->{'hex'}).";color:".($c->{'text'})."\"")."><span>".$safescenario."</span></td>";
+		$html .= "<tr data-scenario=\"".($self->{'scenario-props'}{$t}{'css'}||safeID($scenario))."".($scenario =~ /$self->{'flexible'}/i ? "-flexible":"")."\"><td ".($self->{'scenario-props'}{$t}{'css'} ? "class=\"".$self->{'scenario-props'}{$t}{'css'}."\"" : "style=\"background-color:".($c->{'hex'}).";color:".($c->{'text'})."\"")."><span>".$safescenario."</span></td>";
 		
 		for($y = $ticks{'data-0'}; $y <= $maxyr; $y += 10){
 			if($y ge $minyr){
