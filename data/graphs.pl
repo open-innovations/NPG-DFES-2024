@@ -97,7 +97,7 @@ if(-e $file_index){
 			close(FILE);
 
 			# Set whitespace for HTML
-			$svg =~ s/\n/\n\t\t\t\t/g;
+			$svg =~ s/\n/\n\t\t\t\t\t/g;
 			$table =~ s/\n/\n\t\t\t\t/g;
 
 			$html .= "\t\t\t<figure>\n";
@@ -105,7 +105,11 @@ if(-e $file_index){
 			$html .= "\t\t\t\t<div class=\"table-holder\">\n";
 			$html .= "\t\t\t\t".$table;
 			$html .= "</div>\n";
-			$html .= "\t\t\t\t$svg\n";
+			$html .= "\t\t\t\t<div class=\"oi-viz oi-chart oi-chart-line\">\n";
+			$html .= "\t\t\t\t\t<a id=\"pre-fig-$fig\" href=\"#post-fig-$fig\" class=\"skip-link button\">Skip chart</a>\n";
+			$html .= "\t\t\t\t\t$svg\n";
+			$html .= "\t\t\t\t\t<a id=\"post-fig-$fig\" href=\"#pre-fig-$fig\" class=\"skip-link skip-link-bottom button\">Go to start of chart</a>\n";
+			$html .= "\t\t\t\t</div>\n";
 			$html .= "\t\t\t\t<div class=\"download\">\n";
 			$html .= "\t\t\t\t\t<a href=\"data/graphs/$graphs[$i]{'svg'}\"><img src=\"resources/download.svg\" alt=\"download\" title=\"Download graph from Figure ".($i+1)."\" /> SVG</a>\n";
 			$html .= "\t\t\t\t\t<a href=\"data/graphs/$graphs[$i]{'csv'}\"><img src=\"resources/download.svg\" alt=\"download\" title=\"Download data from Figure ".($i+1)."\" /> CSV</a>\n";

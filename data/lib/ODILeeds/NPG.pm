@@ -143,15 +143,15 @@ sub draw {
 	if(!$props{'tick'} || $props{'tick'} eq ""){ $props{'tick'} = 5; }
 
 	# Build SVG
-	$svg = "<svg width=\"".sprintf("%d",$w)."\" height=\"".sprintf("%d",$h)."\" viewBox=\"0 0 $w $h\" xmlns=\"http://www.w3.org/2000/svg\" style=\"overflow:display\" preserveAspectRatio=\"xMinYMin meet\" overflow=\"visible\">\n";
+	$svg = "<svg width=\"".sprintf("%d",$w)."\" height=\"".sprintf("%d",$h)."\" viewBox=\"0 0 $w $h\" xmlns=\"http://www.w3.org/2000/svg\" style=\"overflow:display\" preserveAspectRatio=\"xMinYMin meet\" overflow=\"visible\" class=\"oi-chart-main\" data-type=\"line-chart\">\n";
 	$svg .= "<defs>\n";
 	$svg .= "\t<style>\n";
-	$svg .= "\t.data-series path.line { fill-opacity: 0; }\n";
-	$svg .= "\t.data-series path.line.dotted { stroke-dasharray: 12 20 }\n";
-	$svg .= "\t.data-series circle { display: none; }\n";
-	$svg .= "\t.data-series:hover path.line, .data-series.on path.line { stroke-width: $props{'strokehover'}; }\n";
-	$svg .= "\t.data-series:hover circle, .data-series.on circle { display: inline; }\n";
-	$svg .= "\t.data-series circle:hover, .data-series circle.on { r: $props{'pointhover'}px!important; fill: black; }\n";
+	$svg .= "\t.series path.line { fill-opacity: 0; }\n";
+	$svg .= "\t.series path.line.dotted { stroke-dasharray: 12 20 }\n";
+	$svg .= "\t.series:hover path.line, .series.on path.line { stroke-width: $props{'strokehover'}; }\n";
+	$svg .= "\t.series .marker { opacity:0.01; }\n";
+	$svg .= "\t.series:hover .marker, .series.active .marker, .series .marker.selected { opacity:1!important; }\n";
+	$svg .= "\t.series .marker:hover, .series .marker.on { r: $props{'pointhover'}px!important; fill: black; }\n";
 	$svg .= "\t.grid { font-family: \"Helvetica Neue\",Helvetica,Arial,\"Lucida Grande\",sans-serif; }\n";
 	$svg .= "\t.grid line { stroke: rgb(0,0,0); stroke-width: $props{'line'}; stroke-linecap: round; }\n";
 	$svg .= "\t.grid.grid-x text { text-anchor: middle; dominant-baseline: hanging; transform: translateY(".($props{'tick'}*2)."px); }\n";
@@ -168,6 +168,7 @@ sub draw {
 	$svg .= buildAxis(('axis'=>'y','label'=>$props{'yaxis-label'},'tick'=>5,'ticks'=>$props{'yaxis-ticks'},'line'=>$props{'xaxis-line'},'format'=>$props{'yaxis-format'},'n'=>4,'left'=>$left,'right'=>$right,'bottom'=>$bottom,'top'=>$top,'axis-lines'=>$props{'yaxis-lines'},'width'=>$w,'height'=>$h,'xmin'=>$minyr,'xmax'=>$maxyr,'ymin'=>$miny,'ymax'=>$maxy));
 	$svg .= buildAxis(('axis'=>'x','label'=>$props{'xaxis-label'},'tick'=>5,'ticks'=>$props{'xaxis-ticks'},'line'=>$props{'yaxis-line'},'format'=>$props{'xaxis-format'},'left'=>$left,'right'=>$right,'bottom'=>$bottom,'top'=>$top,'spacing'=>10,'axis-lines'=>$props{'xaxis-lines'},'width'=>$w,'height'=>$h,'xmin'=>$minyr,'xmax'=>$maxyr,'ymin'=>$miny,'ymax'=>$maxy));
 
+	$svg .= "<g class=\"data-layer\" role=\"table\">\n";
 	for($s = 0; $s < @{$self->{'scenariolookup'}}; $s++){
 		$scenario = $self->{'scenariolookup'}[$s];
 		$safescenario = safeXML($scenario);
@@ -175,16 +176,16 @@ sub draw {
 		$t =~ s/[\(\)]//g;
 		$t =~ s/ $self->{'flexible'}//gi;
 		$path = "";
-		$svg .= "<g data-scenario=\"".($self->{'scenario-props'}{$t}{'css'}||safeID($scenario)).($scenario =~ /$self->{'flexible'}/i ? "-flexible":"")."\" class=\"data-series\">";
+		$svg .= "<g data-scenario=\"".($self->{'scenario-props'}{$t}{'css'}||safeID($scenario)).($scenario =~ /$self->{'flexible'}/i ? "-flexible":"")."\" class=\"series series-".($s+1)."\" tabindex=\"0\" role=\"row\" aria-label=\"Series: $scenario\" data-series=\"".($s+1)."\">";
 		$circles = "";
-		for($y = $minyr; $y <= $maxyr; $y++){
+		for($y = $minyr,$i=0; $y <= $maxyr; $y++,$i++){
 			if($self->{'scenarios'}{$scenario}{$y}){
 				@pos = getXY(('x'=>$y,'y'=>$self->{'scenarios'}{$scenario}{$y},'width'=>$w,'height'=>$h,'left'=>$left,'right'=>$right,'bottom'=>$bottom,'top'=>$top,'xmin'=>$minyr,'xmax'=>$maxyr,'ymin'=>$miny,'ymax'=>$maxy));
 				$xpos = $pos[0];
 				$ypos = $pos[1];
 				$path .= ($y == $minyr ? "M":"L")." ".sprintf("%0.2f",$xpos).",".sprintf("%0.2f",$ypos);
 				if($props{'point'} > 0){
-					$circles .= "\t<circle cx=\"".sprintf("%0.2f",$xpos)."\" cy=\"".sprintf("%0.2f",$ypos)."\" data-y=\"$self->{'scenarios'}{$scenario}{$y}\" data-x=\"$y\" r=\"$props{'point'}\" fill=\"".($self->{'scenario-props'}{$t}{'color'}||"#cc0935")."\"><title>$y: $self->{'scenarios'}{$scenario}{$y}</title></circle>\n";
+					$circles .= "\t<circle class=\"marker\" cx=\"".sprintf("%0.2f",$xpos)."\" cy=\"".sprintf("%0.2f",$ypos)."\" data-y=\"$self->{'scenarios'}{$scenario}{$y}\" data-x=\"$y\" data-i=\"$i\" data-series=\"".($s+1)."\" r=\"$props{'point'}\" fill=\"".($self->{'scenario-props'}{$t}{'color'}||"#cc0935")."\" roll=\"cell\"><title>$y: $self->{'scenarios'}{$scenario}{$y}</title></circle>\n";
 				}
 			}
 		}
@@ -192,7 +193,7 @@ sub draw {
 		$svg .= $circles;
 		$svg .= "</g>\n";
 	}
-
+	$svg .= "</g>\n";
 	$svg .= "</svg>\n";
 	
 	return $svg;

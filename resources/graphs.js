@@ -4,20 +4,20 @@ function highlightScenario(scenario){
 
 	if(scenario){
 		for(s = 0; s < svgs.length; s++){
-			lines = svgs[s].querySelectorAll('.data-series');
+			lines = svgs[s].querySelectorAll('.series');
 			var match = -1;
 			for(i = 0; i < lines.length; i++){
-				if(lines[i].getAttribute('data-scenario')==scenario){ lines[i].classList.add('on'); match = i; }
-				else lines[i].classList.remove('on');
+				if(lines[i].getAttribute('data-scenario')==scenario){ lines[i].classList.add('active'); match = i; }
+				else lines[i].classList.remove('active');
 			}
 			// Move series to top
 			if(match >= 0){
-				lines[match].closest('svg').appendChild(lines[match])
+				lines[match].closest('svg .data-layer').appendChild(lines[match])
 			}
 		}
 		for(i = 0; i < trs.length; i++){
-			if(trs[i].getAttribute('data-scenario')==scenario) trs[i].classList.add('on');
-			else trs[i].classList.remove('on');
+			if(trs[i].getAttribute('data-scenario')==scenario) trs[i].classList.add('active');
+			else trs[i].classList.remove('active');
 		}
 	}
 	
@@ -84,5 +84,4 @@ if(toload == 0) ready();
 else{
 	for(var i = 0; i < toload; i++) getResource(res[i]);
 }
-
 
