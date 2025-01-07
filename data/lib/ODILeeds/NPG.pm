@@ -118,7 +118,7 @@ sub scaleY {
 # Draw the graph
 sub draw {
 	my ($self, %props) = @_;
-	my ($r,$w,$h,@lines,$svg,@header,%headers,$c,@cols,@rows,$i,@scenariolookup,$s,%scenarios,$scenario,$safescenario,$minyr,$maxyr,$miny,$maxy,$path,$y,$yrs,$yrange,$xpos,$ypos,$t,@pos,$circles,%ticks,@a,@b,$left,$right,$top,$bottom);
+	my ($r,$w,$h,@lines,$svg,@header,%headers,$c,@cols,@rows,$i,@scenariolookup,$s,%scenarios,$scenario,$safescenario,$minyr,$maxyr,$miny,$maxy,$path,$y,$yrs,$yrange,$xpos,$ypos,$t,@pos,$circles,%ticks,@a,@b,$left,$right,$top,$bottom,$tooltip);
 
 	$w = $props{'width'};
 	$h = $props{'height'};
@@ -168,9 +168,11 @@ sub draw {
 	$svg .= buildAxis(('axis'=>'y','label'=>$props{'yaxis-label'},'tick'=>5,'ticks'=>$props{'yaxis-ticks'},'line'=>$props{'xaxis-line'},'format'=>$props{'yaxis-format'},'n'=>4,'left'=>$left,'right'=>$right,'bottom'=>$bottom,'top'=>$top,'axis-lines'=>$props{'yaxis-lines'},'width'=>$w,'height'=>$h,'xmin'=>$minyr,'xmax'=>$maxyr,'ymin'=>$miny,'ymax'=>$maxy));
 	$svg .= buildAxis(('axis'=>'x','label'=>$props{'xaxis-label'},'tick'=>5,'ticks'=>$props{'xaxis-ticks'},'line'=>$props{'yaxis-line'},'format'=>$props{'xaxis-format'},'left'=>$left,'right'=>$right,'bottom'=>$bottom,'top'=>$top,'spacing'=>10,'axis-lines'=>$props{'xaxis-lines'},'width'=>$w,'height'=>$h,'xmin'=>$minyr,'xmax'=>$maxyr,'ymin'=>$miny,'ymax'=>$maxy));
 
+		
 	$svg .= "<g class=\"data-layer\" role=\"table\">\n";
 	for($s = 0; $s < @{$self->{'scenariolookup'}}; $s++){
 		$scenario = $self->{'scenariolookup'}[$s];
+		#print Dumper $self->{'scenarios'}{$scenario};
 		$safescenario = safeXML($scenario);
 		$t = $scenario;
 		$t =~ s/[\(\)]//g;
@@ -185,7 +187,10 @@ sub draw {
 				$ypos = $pos[1];
 				$path .= ($y == $minyr ? "M":"L")." ".sprintf("%0.2f",$xpos).",".sprintf("%0.2f",$ypos);
 				if($props{'point'} > 0){
-					$circles .= "\t<circle class=\"marker\" cx=\"".sprintf("%0.2f",$xpos)."\" cy=\"".sprintf("%0.2f",$ypos)."\" data-y=\"$self->{'scenarios'}{$scenario}{$y}\" data-x=\"$y\" data-i=\"$i\" data-series=\"".($s+1)."\" r=\"$props{'point'}\" fill=\"".($self->{'scenario-props'}{$t}{'color'}||"#cc0935")."\" roll=\"cell\"><title>$y: $self->{'scenarios'}{$scenario}{$y}</title></circle>\n";
+					$tooltip = ($props{'tooltip'}||"$y: $self->{'scenarios'}{$scenario}{$y}");
+					$tooltip =~ s/\{\{\s*x\s*\}\}/$y/g;
+					$tooltip =~ s/\{\{\s*y\s*\}\}/$self->{'scenarios'}{$scenario}{$y}/g;
+					$circles .= "\t<circle class=\"marker\" cx=\"".sprintf("%0.2f",$xpos)."\" cy=\"".sprintf("%0.2f",$ypos)."\" data-y=\"$self->{'scenarios'}{$scenario}{$y}\" data-x=\"$y\" data-i=\"$i\" data-series=\"".($s+1)."\" r=\"$props{'point'}\" fill=\"".($self->{'scenario-props'}{$t}{'color'}||"#cc0935")."\" roll=\"cell\"><title>$tooltip</title></circle>\n";
 				}
 			}
 		}

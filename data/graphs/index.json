@@ -11,6 +11,7 @@
 		"title":"Electric vehicle penetration of total car stock (%)",
 		"csv":"ElectricVehiclePenetrationOfTotalCarStock_percent.csv",
 		"svg":"graph-ev-percent.svg",
+		"tooltip":"{{x}}: {{y}}%",
 		"yaxis-label": "EVs (%)",
 		"yaxis-max": 100,
 		"yscale": 100,
@@ -25,12 +26,14 @@
 		"title":"Battery storage capacity installed (GW)",
 		"csv":"BatteryStorageCapacityInstalled_GW.csv",
 		"svg":"graph-battery-storage.svg",
+		"tooltip":"{{x}}: {{y}} GW",
 		"yaxis-label": "Installed capacity (GW)",
 		"left": 50
 	},{
 		"title":"Renewable generation installed (GW)",
 		"csv":"RenewableGenerationInstalled_GW.csv",
 		"svg":"graph-renewable-generation-installed.svg",
+		"tooltip":"{{x}}: {{y}} GW",
 		"yaxis-label": "Renewable generation (GW)",
 		"left": 50
 	},{
@@ -46,41 +49,48 @@
 		"title":"Annual peak demand (with ToUT)(GW)",
 		"csv":"AnnualPeakDemand_GW.csv",
 		"svg":"graph-annual-peak-demand.svg",
+		"tooltip":"{{x}}: {{y}} GW",
 		"yaxis-label": "Annual peak demand (GW)",
 		"left": 100
 	},{
 		"title":"Network peak demand breakdown - NPg Reference Scenario (GW)",
 		"csv":"NetworkAnnualGrossPeakDemandBreakdown_NPgBestView_GW.csv",
 		"svg":"graph-annual-peak-demand-breakdown.svg",
+		"tooltip":"{{x}}: {{y}} GW",
 		"yaxis-label": "Annual gross peak demand (GW)",
 		"left": 50
 	},{
 		"title":"Network energy consumption breakdown - NPg Reference Scenario (TWh)",
 		"csv":"NetworkEnergyConsumptionBreakdown_NPgBestView_TWh.csv",
 		"svg":"graph-energy-consumption-breakdown.svg",
+		"tooltip":"{{x}}: {{y}} TWh",
 		"yaxis-label": "Network energy consumption (TWh)",
 		"left": 70
 	},{
 		"title":"Annual network energy consumption (TWh)",
 		"csv":"AnnualNetworkEnergyConsumption_TWh.csv",
 		"svg":"graph-annual-energy-consumption.svg",
+		"tooltip":"{{x}}: {{y}} TWh",
 		"yaxis-label": "Energy consumption (TWh)",
 		"left": 70
 	},{
 		"title":"Network annual fuel consumption breakdown - NPg Planning Scenario (GWh-yr)",
 		"csv":"NetworkAnnualFuelConsumptionBreakdown_NPgPlanningScenario_GWh-yr.csv",
 		"svg":"graph-fuel-consumption-planning-scenario.svg",
+		"tooltip":"{{x}}: {{y}} GWh-yr",
 		"yaxis-label": "Fuel consumption (GWh-yr)",
 		"left": 100
 	},{
 		"title":"Additional industrial peak demand breakdown - NPg Reference Scenario (MW)",
 		"csv":"IndustryAdditionalPeakDemandBreakdown_NPgBestView_MW.csv",
 		"svg":"graph-industry-additional-peak-demand-planning-scenario.svg",
+		"tooltip":"{{x}}: {{y}} MW",
 		"yaxis-label": "Peak demand (MW)",
 		"left": 70
 	},{
 		"title":"Additional industrial energy consumption breakdown - NPg Reference Scenario (GWh)",
 		"csv":"IndustryAdditionalEnergyConsumptionBreakdown_NPgBestView_GWh.csv",
+		"tooltip":"{{x}}: {{y}} GWh",
 		"svg":"graph-industry-additional-energy-consumption-planning-scenario.svg",
 		"yaxis-label": "Energy consumption (GWh)",
 		"left": 80
@@ -88,18 +98,21 @@
 		"title": "Annual carbon emissions (MtCO2)",
 		"csv":"AnnualCarbonEmissions_MtCO2.csv",
 		"svg":"graph-annual-co2-emissions.svg",
+		"tooltip":"{{x}}: {{y}} MtCO2",
 		"yaxis-label": "Mt CO2(e)",
 		"left": 50
 	},{
 		"title":"Cumulative carbon emissions (MtCO2)",
 		"csv":"CumulativeCarbonEmissions_MtCO2.csv",
 		"svg":"graph-cumulative-carbon-emissions.svg",
+		"tooltip":"{{x}}: {{y}} MtCO2",
 		"yaxis-label": "Cumulative emissions (MtCO2)",
 		"left": 70
 	},{
 		"title":"Network annual carbon emission breakdown - Planning Scenario (MtCO2)",
 		"csv":"NetworkAnnualCarbonEmissionBreakdown_NPgPlanningScenario_MtCO2.csv",
 		"svg":"graph-annual-carbon-emissions-planning-scenario.svg",
+		"tooltip":"{{x}}: {{y}} MtCO2",
 		"yaxis-label": "Annual emissions (MtCO2)",
 		"left": 50
 	}]
