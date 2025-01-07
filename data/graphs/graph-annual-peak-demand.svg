@@ -180,34 +180,34 @@
 	<circle cx="592.14" cy="35.56" data-y="14.338" data-x="2049" r="4" fill="#ab1236"><title>2049: 14.338</title></circle>
 	<circle cx="611.07" cy="32.74" data-y="14.510" data-x="2050" r="4" fill="#ab1236"><title>2050: 14.510</title></circle>
 </g>
-<g data-scenario="npg-reference-scenario-without-customer-flexibility" class="data-series">	<path d="M 100.00,166.15L 118.93,160.84L 137.86,155.39L 156.79,148.94L 175.71,139.70L 194.64,134.22L 213.57,129.92L 232.50,123.62L 251.43,118.98L 270.36,114.75L 289.29,110.80L 308.21,107.08L 327.14,99.70L 346.07,90.64L 365.00,82.44L 383.93,74.72L 402.86,67.64L 421.79,60.56L 440.71,54.79L 459.64,49.77L 478.57,45.01L 497.50,40.33L 516.43,35.33L 535.36,31.17L 554.29,27.27L 573.21,23.57L 592.14,19.96L 611.07,17.06" id="NPg Reference Scenario Without Customer Flexibility" class="line" stroke="#cc0935" stroke-width="3" stroke-linecap="round"><title>NPg Reference Scenario Without Customer Flexibility</title></path>
-	<circle cx="100.00" cy="166.15" data-y="6.351" data-x="2023" r="4" fill="#cc0935"><title>2023: 6.351</title></circle>
-	<circle cx="118.93" cy="160.84" data-y="6.676" data-x="2024" r="4" fill="#cc0935"><title>2024: 6.676</title></circle>
-	<circle cx="137.86" cy="155.39" data-y="7.009" data-x="2025" r="4" fill="#cc0935"><title>2025: 7.009</title></circle>
-	<circle cx="156.79" cy="148.94" data-y="7.404" data-x="2026" r="4" fill="#cc0935"><title>2026: 7.404</title></circle>
-	<circle cx="175.71" cy="139.70" data-y="7.969" data-x="2027" r="4" fill="#cc0935"><title>2027: 7.969</title></circle>
-	<circle cx="194.64" cy="134.22" data-y="8.304" data-x="2028" r="4" fill="#cc0935"><title>2028: 8.304</title></circle>
-	<circle cx="213.57" cy="129.92" data-y="8.567" data-x="2029" r="4" fill="#cc0935"><title>2029: 8.567</title></circle>
-	<circle cx="232.50" cy="123.62" data-y="8.952" data-x="2030" r="4" fill="#cc0935"><title>2030: 8.952</title></circle>
-	<circle cx="251.43" cy="118.98" data-y="9.236" data-x="2031" r="4" fill="#cc0935"><title>2031: 9.236</title></circle>
-	<circle cx="270.36" cy="114.75" data-y="9.495" data-x="2032" r="4" fill="#cc0935"><title>2032: 9.495</title></circle>
-	<circle cx="289.29" cy="110.80" data-y="9.736" data-x="2033" r="4" fill="#cc0935"><title>2033: 9.736</title></circle>
-	<circle cx="308.21" cy="107.08" data-y="9.964" data-x="2034" r="4" fill="#cc0935"><title>2034: 9.964</title></circle>
-	<circle cx="327.14" cy="99.70" data-y="10.415" data-x="2035" r="4" fill="#cc0935"><title>2035: 10.415</title></circle>
-	<circle cx="346.07" cy="90.64" data-y="10.969" data-x="2036" r="4" fill="#cc0935"><title>2036: 10.969</title></circle>
-	<circle cx="365.00" cy="82.44" data-y="11.471" data-x="2037" r="4" fill="#cc0935"><title>2037: 11.471</title></circle>
-	<circle cx="383.93" cy="74.72" data-y="11.943" data-x="2038" r="4" fill="#cc0935"><title>2038: 11.943</title></circle>
-	<circle cx="402.86" cy="67.64" data-y="12.376" data-x="2039" r="4" fill="#cc0935"><title>2039: 12.376</title></circle>
-	<circle cx="421.79" cy="60.56" data-y="12.809" data-x="2040" r="4" fill="#cc0935"><title>2040: 12.809</title></circle>
-	<circle cx="440.71" cy="54.79" data-y="13.162" data-x="2041" r="4" fill="#cc0935"><title>2041: 13.162</title></circle>
-	<circle cx="459.64" cy="49.77" data-y="13.469" data-x="2042" r="4" fill="#cc0935"><title>2042: 13.469</title></circle>
-	<circle cx="478.57" cy="45.01" data-y="13.760" data-x="2043" r="4" fill="#cc0935"><title>2043: 13.760</title></circle>
-	<circle cx="497.50" cy="40.33" data-y="14.046" data-x="2044" r="4" fill="#cc0935"><title>2044: 14.046</title></circle>
-	<circle cx="516.43" cy="35.33" data-y="14.352" data-x="2045" r="4" fill="#cc0935"><title>2045: 14.352</title></circle>
-	<circle cx="535.36" cy="31.17" data-y="14.606" data-x="2046" r="4" fill="#cc0935"><title>2046: 14.606</title></circle>
-	<circle cx="554.29" cy="27.27" data-y="14.845" data-x="2047" r="4" fill="#cc0935"><title>2047: 14.845</title></circle>
-	<circle cx="573.21" cy="23.57" data-y="15.071" data-x="2048" r="4" fill="#cc0935"><title>2048: 15.071</title></circle>
-	<circle cx="592.14" cy="19.96" data-y="15.292" data-x="2049" r="4" fill="#cc0935"><title>2049: 15.292</title></circle>
-	<circle cx="611.07" cy="17.06" data-y="15.469" data-x="2050" r="4" fill="#cc0935"><title>2050: 15.469</title></circle>
+<g data-scenario="reference-scenario-customer-flexibility" class="data-series">	<path d="M 100.00,166.15L 118.93,160.84L 137.86,155.39L 156.79,148.94L 175.71,139.70L 194.64,134.22L 213.57,129.92L 232.50,123.62L 251.43,118.98L 270.36,114.75L 289.29,110.80L 308.21,107.08L 327.14,99.70L 346.07,90.64L 365.00,82.44L 383.93,74.72L 402.86,67.64L 421.79,60.56L 440.71,54.79L 459.64,49.77L 478.57,45.01L 497.50,40.33L 516.43,35.33L 535.36,31.17L 554.29,27.27L 573.21,23.57L 592.14,19.96L 611.07,17.06" id="NPg Reference Scenario Without Customer Flexibility" class="line dotted" stroke="#ab1236" stroke-width="3" stroke-linecap="round"><title>NPg Reference Scenario Without Customer Flexibility</title></path>
+	<circle cx="100.00" cy="166.15" data-y="6.351" data-x="2023" r="4" fill="#ab1236"><title>2023: 6.351</title></circle>
+	<circle cx="118.93" cy="160.84" data-y="6.676" data-x="2024" r="4" fill="#ab1236"><title>2024: 6.676</title></circle>
+	<circle cx="137.86" cy="155.39" data-y="7.009" data-x="2025" r="4" fill="#ab1236"><title>2025: 7.009</title></circle>
+	<circle cx="156.79" cy="148.94" data-y="7.404" data-x="2026" r="4" fill="#ab1236"><title>2026: 7.404</title></circle>
+	<circle cx="175.71" cy="139.70" data-y="7.969" data-x="2027" r="4" fill="#ab1236"><title>2027: 7.969</title></circle>
+	<circle cx="194.64" cy="134.22" data-y="8.304" data-x="2028" r="4" fill="#ab1236"><title>2028: 8.304</title></circle>
+	<circle cx="213.57" cy="129.92" data-y="8.567" data-x="2029" r="4" fill="#ab1236"><title>2029: 8.567</title></circle>
+	<circle cx="232.50" cy="123.62" data-y="8.952" data-x="2030" r="4" fill="#ab1236"><title>2030: 8.952</title></circle>
+	<circle cx="251.43" cy="118.98" data-y="9.236" data-x="2031" r="4" fill="#ab1236"><title>2031: 9.236</title></circle>
+	<circle cx="270.36" cy="114.75" data-y="9.495" data-x="2032" r="4" fill="#ab1236"><title>2032: 9.495</title></circle>
+	<circle cx="289.29" cy="110.80" data-y="9.736" data-x="2033" r="4" fill="#ab1236"><title>2033: 9.736</title></circle>
+	<circle cx="308.21" cy="107.08" data-y="9.964" data-x="2034" r="4" fill="#ab1236"><title>2034: 9.964</title></circle>
+	<circle cx="327.14" cy="99.70" data-y="10.415" data-x="2035" r="4" fill="#ab1236"><title>2035: 10.415</title></circle>
+	<circle cx="346.07" cy="90.64" data-y="10.969" data-x="2036" r="4" fill="#ab1236"><title>2036: 10.969</title></circle>
+	<circle cx="365.00" cy="82.44" data-y="11.471" data-x="2037" r="4" fill="#ab1236"><title>2037: 11.471</title></circle>
+	<circle cx="383.93" cy="74.72" data-y="11.943" data-x="2038" r="4" fill="#ab1236"><title>2038: 11.943</title></circle>
+	<circle cx="402.86" cy="67.64" data-y="12.376" data-x="2039" r="4" fill="#ab1236"><title>2039: 12.376</title></circle>
+	<circle cx="421.79" cy="60.56" data-y="12.809" data-x="2040" r="4" fill="#ab1236"><title>2040: 12.809</title></circle>
+	<circle cx="440.71" cy="54.79" data-y="13.162" data-x="2041" r="4" fill="#ab1236"><title>2041: 13.162</title></circle>
+	<circle cx="459.64" cy="49.77" data-y="13.469" data-x="2042" r="4" fill="#ab1236"><title>2042: 13.469</title></circle>
+	<circle cx="478.57" cy="45.01" data-y="13.760" data-x="2043" r="4" fill="#ab1236"><title>2043: 13.760</title></circle>
+	<circle cx="497.50" cy="40.33" data-y="14.046" data-x="2044" r="4" fill="#ab1236"><title>2044: 14.046</title></circle>
+	<circle cx="516.43" cy="35.33" data-y="14.352" data-x="2045" r="4" fill="#ab1236"><title>2045: 14.352</title></circle>
+	<circle cx="535.36" cy="31.17" data-y="14.606" data-x="2046" r="4" fill="#ab1236"><title>2046: 14.606</title></circle>
+	<circle cx="554.29" cy="27.27" data-y="14.845" data-x="2047" r="4" fill="#ab1236"><title>2047: 14.845</title></circle>
+	<circle cx="573.21" cy="23.57" data-y="15.071" data-x="2048" r="4" fill="#ab1236"><title>2048: 15.071</title></circle>
+	<circle cx="592.14" cy="19.96" data-y="15.292" data-x="2049" r="4" fill="#ab1236"><title>2049: 15.292</title></circle>
+	<circle cx="611.07" cy="17.06" data-y="15.469" data-x="2050" r="4" fill="#ab1236"><title>2050: 15.469</title></circle>
 </g>
 </svg>

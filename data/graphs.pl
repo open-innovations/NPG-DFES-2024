@@ -22,9 +22,13 @@ my $file_scenario = $dir."scenarios/index.json";
 my $file_colours = $dir."colours.csv";
 my $file_index = $dir."graphs/index.json";
 
+# Define output file
+my $file_html = $dir."../graphs.html";
 
 
-my (@lines,%scenarios,@cols,$line,$scenario,@graphs,$html,$i,$graph,$svg);
+
+# Define variables
+my (@lines,%scenarios,@cols,$line,$scenario,@graphs,$html,$i,$graph,$svg,@sections,$section,$s,$str,$fig,$table);
 
 # Get the scenario config
 msg("Reading scenarios from <cyan>$file_scenario<none>\n");
@@ -58,47 +62,69 @@ if(-e $file_index){
 	open(FILE,$file_index);
 	@lines = <FILE>;
 	close(FILE);
-	@graphs = @{JSON::XS->new->utf8->decode(join("\n",@lines))};
-
-
+	@sections = @{JSON::XS->new->utf8->decode(join("\n",@lines))};
 
 	# Create the SVG output
 	$graph = ODILeeds::NPG->new();
 	$graph->setScenarios(%scenarios);
-
 	$html = "";
-	for($i = 0; $i < (@graphs); $i++){
-		msg("Processing <cyan>".$dir."graphs/$graphs[$i]{'csv'}<none>\n");
-		$graph->load($dir.'graphs/'.$graphs[$i]{'csv'})->process();
-		
-		# If we have a y-axis scaling we scale the values
-		if($graphs[$i]{'yscale'}){
-			$graph->scaleY($graphs[$i]{'yscale'});
+
+
+	$fig = 1;
+
+	for($s = 0; $s < @sections; $s++){
+		msg("Section: <green>".($sections[$s]->{'title'}||"")."<none>\n");
+
+		$html .= "<h2>".($sections[$s]->{'title'}||"")."</h2>\n";
+		if($sections[$s]->{'intro'}){
+			$html .= ($sections[$s]->{'intro'}||"")."\n";
 		}
-		
-		# Output the SVG
-		$svg = $graph->draw(('yaxis-label'=>$graphs[$i]{'yaxis-label'},'yscale'=>$graphs[$i]{'yscale'},'yaxis-max'=>$graphs[$i]{'yaxis-max'},'width'=>'640','xaxis-max'=>2051,'xaxis-line'=>1,'stroke'=>3,'strokehover'=>5,'point'=>4,'pointhover'=>6,'line'=>2,'yaxis-format'=>"commify",'yaxis-labels-baseline'=>'middle','xaxis-ticks'=>1,'left'=>$graphs[$i]{'left'}));
-		open(FILE,'>',$dir.'graphs/'.$graphs[$i]{'svg'});
-		print FILE $svg;
-		close(FILE);
-		
-		$html = "";
-		$html .= "\t\t\t<figure class=\"jekyll-parse\">\n";
-		$html .= "\t\t\t\t<figcaption><strong>Figure ".($i+1).":</strong> $graphs[$i]{'title'}</figcaption>\n";
-		$html .= "\t\t\t\t<div class=\"table-holder\">";
-		$html .= $graph->table(());
-		$html .= "</div>\n";
-		$html .= "\t\t\t\t$svg\n";
-		$html .= "\t\t\t\t<div class=\"download\">\n";
-		$html .= "\t\t\t\t\t<a href=\"data/graphs/$graphs[$i]{'svg'}\"><img src=\"resources/download.svg\" alt=\"download\" title=\"Download graph from Figure ".($i+1)."\" /> SVG</a>\n";
-		$html .= "\t\t\t\t\t<a href=\"data/graphs/$graphs[$i]{'csv'}\"><img src=\"resources/download.svg\" alt=\"download\" title=\"Download data from Figure ".($i+1)."\" /> CSV</a>\n";
-		$html .= "\t\t\t\t</div>\n";
-		$html .= "\t\t\t</figure>\n\n";
-		
-		open(FILE,">",$dir.'graphs/'.$graphs[$i]{'figure'});
-		print FILE $html;
-		close(FILE);
+		@graphs = @{$sections[$s]->{'graphs'}};
+		for($i = 0; $i < (@graphs); $i++,$fig++){
+			msg("\tFigure <yellow>$fig<none>: <cyan>".$dir."graphs/$graphs[$i]{'csv'}<none>\n");
+			$graph->load($dir.'graphs/'.$graphs[$i]{'csv'})->process();
+			
+			# If we have a y-axis scaling we scale the values
+			if($graphs[$i]{'yscale'}){
+				$graph->scaleY($graphs[$i]{'yscale'});
+			}
+			$table = $graph->table(());
+			
+			# Output the SVG
+			$svg = $graph->draw(('yaxis-label'=>$graphs[$i]{'yaxis-label'},'yscale'=>$graphs[$i]{'yscale'},'yaxis-max'=>$graphs[$i]{'yaxis-max'},'width'=>'640','xaxis-max'=>2051,'xaxis-line'=>1,'stroke'=>3,'strokehover'=>5,'point'=>4,'pointhover'=>6,'line'=>2,'yaxis-format'=>"commify",'yaxis-labels-baseline'=>'middle','xaxis-ticks'=>1,'left'=>$graphs[$i]{'left'}));
+			open(FILE,'>',$dir.'graphs/'.$graphs[$i]{'svg'});
+			print FILE $svg;
+			close(FILE);
+
+			# Set whitespace for HTML
+			$svg =~ s/\n/\n\t\t\t\t/g;
+			$table =~ s/\n/\n\t\t\t\t/g;
+
+			$html .= "\t\t\t<figure>\n";
+			$html .= "\t\t\t\t<figcaption><strong>Figure ".($fig).":</strong> $graphs[$i]{'title'}</figcaption>\n";
+			$html .= "\t\t\t\t<div class=\"table-holder\">\n";
+			$html .= "\t\t\t\t".$table;
+			$html .= "</div>\n";
+			$html .= "\t\t\t\t$svg\n";
+			$html .= "\t\t\t\t<div class=\"download\">\n";
+			$html .= "\t\t\t\t\t<a href=\"data/graphs/$graphs[$i]{'svg'}\"><img src=\"resources/download.svg\" alt=\"download\" title=\"Download graph from Figure ".($i+1)."\" /> SVG</a>\n";
+			$html .= "\t\t\t\t\t<a href=\"data/graphs/$graphs[$i]{'csv'}\"><img src=\"resources/download.svg\" alt=\"download\" title=\"Download data from Figure ".($i+1)."\" /> CSV</a>\n";
+			$html .= "\t\t\t\t</div>\n";
+			$html .= "\t\t\t</figure>\n\n";
+			
+		}
 	}
+	
+	open(FILE,$file_html);
+	@lines = <FILE>;
+	close(FILE);
+	$str = join("",@lines);
+	$str =~ s/(<!-- START GRAPHS -->)(.*)(<!-- END GRAPHS -->)/$1$html$3/s;
+
+	msg("Save result in <cyan>$file_html<none>\n");
+	open(FILE,">",$file_html);
+	print FILE $str;
+	close(FILE);
 
 }else{
 	error("Unable to read graph definitions from <cyan>$file_index<none>\n");
