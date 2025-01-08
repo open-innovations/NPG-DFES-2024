@@ -180,18 +180,19 @@ sub draw {
 		$path = "";
 		$svg .= "<g data-scenario=\"".($self->{'scenario-props'}{$t}{'css'}||safeID($scenario)).($scenario =~ /$self->{'flexible'}/i ? "-flexible":"")."\" class=\"series series-".($s+1)."\" tabindex=\"0\" role=\"row\" aria-label=\"Series: $scenario\" data-series=\"".($s+1)."\">";
 		$circles = "";
-		for($y = $minyr,$i=0; $y <= $maxyr; $y++,$i++){
+		for($y = $minyr,$i=0; $y <= $maxyr; $y++){
 			if(defined($self->{'scenarios'}{$scenario}{$y})){
 				@pos = getXY(('x'=>$y,'y'=>$self->{'scenarios'}{$scenario}{$y},'width'=>$w,'height'=>$h,'left'=>$left,'right'=>$right,'bottom'=>$bottom,'top'=>$top,'xmin'=>$minyr,'xmax'=>$maxyr,'ymin'=>$miny,'ymax'=>$maxy));
 				$xpos = $pos[0];
 				$ypos = $pos[1];
-				$path .= ($y == $minyr ? "M":"L")." ".sprintf("%0.2f",$xpos).",".sprintf("%0.2f",$ypos);
+				$path .= ($i == 0 ? "M":"L")." ".sprintf("%0.2f",$xpos).",".sprintf("%0.2f",$ypos);
 				if($props{'point'} > 0){
 					$tooltip = ($props{'tooltip'}||"$y: $self->{'scenarios'}{$scenario}{$y}");
 					$tooltip =~ s/\{\{\s*x\s*\}\}/$y/g;
 					$tooltip =~ s/\{\{\s*y\s*\}\}/$self->{'scenarios'}{$scenario}{$y}/g;
 					$circles .= "\t<circle class=\"marker\" cx=\"".sprintf("%0.2f",$xpos)."\" cy=\"".sprintf("%0.2f",$ypos)."\" data-y=\"$self->{'scenarios'}{$scenario}{$y}\" data-x=\"$y\" data-i=\"$i\" data-series=\"".($s+1)."\" r=\"$props{'point'}\" fill=\"".($self->{'scenario-props'}{$t}{'color'}||"#cc0935")."\" roll=\"cell\"><title>$tooltip</title></circle>\n";
 				}
+				$i++;
 			}
 		}
 		$svg .= "\t<path d=\"$path\" id=\"$safescenario\" class=\"line".($scenario =~ /$self->{'flexible'}/i ? " dotted":"")."\" stroke=\"".($self->{'scenario-props'}{$t}{'color'}||"#cc0935")."\" stroke-width=\"$props{'stroke'}\" stroke-linecap=\"round\"><title>$safescenario</title></path>\n";
