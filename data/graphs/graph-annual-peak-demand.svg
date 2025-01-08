@@ -181,35 +181,35 @@
 	<circle class="marker" cx="588.57" cy="37.52" data-y="14.338" data-x="2049" data-i="26" data-series="5" r="4" fill="#ab1236" roll="cell"><title>2049: 14.338 GW</title></circle>
 	<circle class="marker" cx="609.29" cy="34.49" data-y="14.510" data-x="2050" data-i="27" data-series="5" r="4" fill="#ab1236" roll="cell"><title>2050: 14.510 GW</title></circle>
 </g>
-<g data-scenario="reference-scenario-flexible" class="series series-6" tabindex="0" role="row" aria-label="Series: NPg Reference Scenario (ToUT)" data-series="6">	<path d="M 50.00,178.17L 70.71,172.44L 91.43,166.58L 112.14,159.62L 132.86,149.67L 153.57,143.78L 174.29,139.14L 195.00,132.36L 215.71,127.36L 236.43,122.80L 257.14,118.56L 277.86,114.54L 298.57,106.60L 319.29,96.85L 340.00,88.01L 360.71,79.70L 381.43,72.07L 402.14,64.45L 422.86,58.23L 443.57,52.82L 464.29,47.70L 485.00,42.66L 505.71,37.28L 526.43,32.80L 547.14,28.60L 567.86,24.62L 588.57,20.72L 609.29,17.61" id="NPg Reference Scenario (ToUT)" class="line dotted" stroke="#ab1236" stroke-width="3" stroke-linecap="round"><title>NPg Reference Scenario (ToUT)</title></path>
-	<circle class="marker" cx="50.00" cy="178.17" data-y="6.351" data-x="2023" data-i="0" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2023: 6.351 GW</title></circle>
-	<circle class="marker" cx="70.71" cy="172.44" data-y="6.676" data-x="2024" data-i="1" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2024: 6.676 GW</title></circle>
-	<circle class="marker" cx="91.43" cy="166.58" data-y="7.009" data-x="2025" data-i="2" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2025: 7.009 GW</title></circle>
-	<circle class="marker" cx="112.14" cy="159.62" data-y="7.404" data-x="2026" data-i="3" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2026: 7.404 GW</title></circle>
-	<circle class="marker" cx="132.86" cy="149.67" data-y="7.969" data-x="2027" data-i="4" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2027: 7.969 GW</title></circle>
-	<circle class="marker" cx="153.57" cy="143.78" data-y="8.304" data-x="2028" data-i="5" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2028: 8.304 GW</title></circle>
-	<circle class="marker" cx="174.29" cy="139.14" data-y="8.567" data-x="2029" data-i="6" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2029: 8.567 GW</title></circle>
-	<circle class="marker" cx="195.00" cy="132.36" data-y="8.952" data-x="2030" data-i="7" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2030: 8.952 GW</title></circle>
-	<circle class="marker" cx="215.71" cy="127.36" data-y="9.236" data-x="2031" data-i="8" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2031: 9.236 GW</title></circle>
-	<circle class="marker" cx="236.43" cy="122.80" data-y="9.495" data-x="2032" data-i="9" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2032: 9.495 GW</title></circle>
-	<circle class="marker" cx="257.14" cy="118.56" data-y="9.736" data-x="2033" data-i="10" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2033: 9.736 GW</title></circle>
-	<circle class="marker" cx="277.86" cy="114.54" data-y="9.964" data-x="2034" data-i="11" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2034: 9.964 GW</title></circle>
-	<circle class="marker" cx="298.57" cy="106.60" data-y="10.415" data-x="2035" data-i="12" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2035: 10.415 GW</title></circle>
-	<circle class="marker" cx="319.29" cy="96.85" data-y="10.969" data-x="2036" data-i="13" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2036: 10.969 GW</title></circle>
-	<circle class="marker" cx="340.00" cy="88.01" data-y="11.471" data-x="2037" data-i="14" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2037: 11.471 GW</title></circle>
-	<circle class="marker" cx="360.71" cy="79.70" data-y="11.943" data-x="2038" data-i="15" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2038: 11.943 GW</title></circle>
-	<circle class="marker" cx="381.43" cy="72.07" data-y="12.376" data-x="2039" data-i="16" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2039: 12.376 GW</title></circle>
-	<circle class="marker" cx="402.14" cy="64.45" data-y="12.809" data-x="2040" data-i="17" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2040: 12.809 GW</title></circle>
-	<circle class="marker" cx="422.86" cy="58.23" data-y="13.162" data-x="2041" data-i="18" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2041: 13.162 GW</title></circle>
-	<circle class="marker" cx="443.57" cy="52.82" data-y="13.469" data-x="2042" data-i="19" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2042: 13.469 GW</title></circle>
-	<circle class="marker" cx="464.29" cy="47.70" data-y="13.760" data-x="2043" data-i="20" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2043: 13.760 GW</title></circle>
-	<circle class="marker" cx="485.00" cy="42.66" data-y="14.046" data-x="2044" data-i="21" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2044: 14.046 GW</title></circle>
-	<circle class="marker" cx="505.71" cy="37.28" data-y="14.352" data-x="2045" data-i="22" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2045: 14.352 GW</title></circle>
-	<circle class="marker" cx="526.43" cy="32.80" data-y="14.606" data-x="2046" data-i="23" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2046: 14.606 GW</title></circle>
-	<circle class="marker" cx="547.14" cy="28.60" data-y="14.845" data-x="2047" data-i="24" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2047: 14.845 GW</title></circle>
-	<circle class="marker" cx="567.86" cy="24.62" data-y="15.071" data-x="2048" data-i="25" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2048: 15.071 GW</title></circle>
-	<circle class="marker" cx="588.57" cy="20.72" data-y="15.292" data-x="2049" data-i="26" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2049: 15.292 GW</title></circle>
-	<circle class="marker" cx="609.29" cy="17.61" data-y="15.469" data-x="2050" data-i="27" data-series="6" r="4" fill="#ab1236" roll="cell"><title>2050: 15.469 GW</title></circle>
+<g data-scenario="npg-reference-scenario-(no-tout)-flexible" class="series series-6" tabindex="0" role="row" aria-label="Series: NPg Reference Scenario (No ToUT)" data-series="6">	<path d="M 50.00,178.17L 70.71,172.44L 91.43,166.58L 112.14,159.62L 132.86,149.67L 153.57,143.78L 174.29,139.14L 195.00,132.36L 215.71,127.36L 236.43,122.80L 257.14,118.56L 277.86,114.54L 298.57,106.60L 319.29,96.85L 340.00,88.01L 360.71,79.70L 381.43,72.07L 402.14,64.45L 422.86,58.23L 443.57,52.82L 464.29,47.70L 485.00,42.66L 505.71,37.28L 526.43,32.80L 547.14,28.60L 567.86,24.62L 588.57,20.72L 609.29,17.61" id="NPg Reference Scenario (No ToUT)" class="line dotted" stroke="#cc0935" stroke-width="3" stroke-linecap="round"><title>NPg Reference Scenario (No ToUT)</title></path>
+	<circle class="marker" cx="50.00" cy="178.17" data-y="6.351" data-x="2023" data-i="0" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2023: 6.351 GW</title></circle>
+	<circle class="marker" cx="70.71" cy="172.44" data-y="6.676" data-x="2024" data-i="1" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2024: 6.676 GW</title></circle>
+	<circle class="marker" cx="91.43" cy="166.58" data-y="7.009" data-x="2025" data-i="2" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2025: 7.009 GW</title></circle>
+	<circle class="marker" cx="112.14" cy="159.62" data-y="7.404" data-x="2026" data-i="3" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2026: 7.404 GW</title></circle>
+	<circle class="marker" cx="132.86" cy="149.67" data-y="7.969" data-x="2027" data-i="4" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2027: 7.969 GW</title></circle>
+	<circle class="marker" cx="153.57" cy="143.78" data-y="8.304" data-x="2028" data-i="5" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2028: 8.304 GW</title></circle>
+	<circle class="marker" cx="174.29" cy="139.14" data-y="8.567" data-x="2029" data-i="6" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2029: 8.567 GW</title></circle>
+	<circle class="marker" cx="195.00" cy="132.36" data-y="8.952" data-x="2030" data-i="7" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2030: 8.952 GW</title></circle>
+	<circle class="marker" cx="215.71" cy="127.36" data-y="9.236" data-x="2031" data-i="8" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2031: 9.236 GW</title></circle>
+	<circle class="marker" cx="236.43" cy="122.80" data-y="9.495" data-x="2032" data-i="9" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2032: 9.495 GW</title></circle>
+	<circle class="marker" cx="257.14" cy="118.56" data-y="9.736" data-x="2033" data-i="10" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2033: 9.736 GW</title></circle>
+	<circle class="marker" cx="277.86" cy="114.54" data-y="9.964" data-x="2034" data-i="11" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2034: 9.964 GW</title></circle>
+	<circle class="marker" cx="298.57" cy="106.60" data-y="10.415" data-x="2035" data-i="12" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2035: 10.415 GW</title></circle>
+	<circle class="marker" cx="319.29" cy="96.85" data-y="10.969" data-x="2036" data-i="13" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2036: 10.969 GW</title></circle>
+	<circle class="marker" cx="340.00" cy="88.01" data-y="11.471" data-x="2037" data-i="14" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2037: 11.471 GW</title></circle>
+	<circle class="marker" cx="360.71" cy="79.70" data-y="11.943" data-x="2038" data-i="15" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2038: 11.943 GW</title></circle>
+	<circle class="marker" cx="381.43" cy="72.07" data-y="12.376" data-x="2039" data-i="16" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2039: 12.376 GW</title></circle>
+	<circle class="marker" cx="402.14" cy="64.45" data-y="12.809" data-x="2040" data-i="17" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2040: 12.809 GW</title></circle>
+	<circle class="marker" cx="422.86" cy="58.23" data-y="13.162" data-x="2041" data-i="18" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2041: 13.162 GW</title></circle>
+	<circle class="marker" cx="443.57" cy="52.82" data-y="13.469" data-x="2042" data-i="19" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2042: 13.469 GW</title></circle>
+	<circle class="marker" cx="464.29" cy="47.70" data-y="13.760" data-x="2043" data-i="20" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2043: 13.760 GW</title></circle>
+	<circle class="marker" cx="485.00" cy="42.66" data-y="14.046" data-x="2044" data-i="21" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2044: 14.046 GW</title></circle>
+	<circle class="marker" cx="505.71" cy="37.28" data-y="14.352" data-x="2045" data-i="22" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2045: 14.352 GW</title></circle>
+	<circle class="marker" cx="526.43" cy="32.80" data-y="14.606" data-x="2046" data-i="23" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2046: 14.606 GW</title></circle>
+	<circle class="marker" cx="547.14" cy="28.60" data-y="14.845" data-x="2047" data-i="24" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2047: 14.845 GW</title></circle>
+	<circle class="marker" cx="567.86" cy="24.62" data-y="15.071" data-x="2048" data-i="25" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2048: 15.071 GW</title></circle>
+	<circle class="marker" cx="588.57" cy="20.72" data-y="15.292" data-x="2049" data-i="26" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2049: 15.292 GW</title></circle>
+	<circle class="marker" cx="609.29" cy="17.61" data-y="15.469" data-x="2050" data-i="27" data-series="6" r="4" fill="#cc0935" roll="cell"><title>2050: 15.469 GW</title></circle>
 </g>
 </g>
 </svg>
