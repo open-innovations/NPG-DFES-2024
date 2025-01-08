@@ -181,7 +181,7 @@ sub draw {
 		$svg .= "<g data-scenario=\"".($self->{'scenario-props'}{$t}{'css'}||safeID($scenario)).($scenario =~ /$self->{'flexible'}/i ? "-flexible":"")."\" class=\"series series-".($s+1)."\" tabindex=\"0\" role=\"row\" aria-label=\"Series: $scenario\" data-series=\"".($s+1)."\">";
 		$circles = "";
 		for($y = $minyr,$i=0; $y <= $maxyr; $y++,$i++){
-			if($self->{'scenarios'}{$scenario}{$y}){
+			if(defined($self->{'scenarios'}{$scenario}{$y})){
 				@pos = getXY(('x'=>$y,'y'=>$self->{'scenarios'}{$scenario}{$y},'width'=>$w,'height'=>$h,'left'=>$left,'right'=>$right,'bottom'=>$bottom,'top'=>$top,'xmin'=>$minyr,'xmax'=>$maxyr,'ymin'=>$miny,'ymax'=>$maxy));
 				$xpos = $pos[0];
 				$ypos = $pos[1];
