@@ -66,3 +66,6 @@ function getResource(res){
 	})
 	return;
 }
+
+
+ready();
