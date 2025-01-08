@@ -66,22 +66,3 @@ function getResource(res){
 	})
 	return;
 }
-
-
-var blocks = document.getElementsByClassName('jekyll-parse');
-for(var i = 0; i < blocks.length; i++){
-	html = blocks[i].innerHTML;
-	html = html.replace(/\{\% include_relative (.*\.[a-zA-Z]*) \%\}/g,function(m,p1){ return "<div class=\"jekyll-resource\" data=\""+p1+"\"></div>"; });
-	blocks[i].innerHTML = html;
-}
-var rs = document.getElementsByClassName('jekyll-remove');
-for(var i = 0; i < rs.length; i++) rs[i].parentNode.removeChild(rs[i]);
-
-var res = document.getElementsByClassName('jekyll-resource');
-var toload = res.length;
-var loaded = 0;
-if(toload == 0) ready();
-else{
-	for(var i = 0; i < toload; i++) getResource(res[i]);
-}
-

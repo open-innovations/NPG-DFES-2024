@@ -143,7 +143,7 @@ sub draw {
 	if(!$props{'tick'} || $props{'tick'} eq ""){ $props{'tick'} = 5; }
 
 	# Build SVG
-	$svg = "<svg width=\"".sprintf("%d",$w)."\" height=\"".sprintf("%d",$h)."\" viewBox=\"0 0 $w $h\" xmlns=\"http://www.w3.org/2000/svg\" style=\"overflow:display\" preserveAspectRatio=\"xMinYMin meet\" overflow=\"visible\" class=\"oi-chart-main\" data-type=\"line-chart\">\n";
+	$svg = "<svg width=\"".sprintf("%d",$w)."\" height=\"".sprintf("%d",$h)."\" viewBox=\"0 0 $w $h\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMinYMin meet\" overflow=\"visible\" class=\"oi-chart-main\" data-type=\"line-chart\">\n";
 	$svg .= "<defs>\n";
 	$svg .= "\t<style>\n";
 	$svg .= "\t.series path.line { fill-opacity: 0; }\n";
@@ -162,7 +162,7 @@ sub draw {
 	$left = $props{'left'}||100;
 	$right = $props{'right'}||10;
 	$top = $props{'top'}||10;
-	$bottom = $props{'bottom'}||50;
+	$bottom = $props{'bottom'}||30;
 
 	# Draw grid lines
 	$svg .= buildAxis(('axis'=>'y','label'=>$props{'yaxis-label'},'tick'=>5,'ticks'=>$props{'yaxis-ticks'},'line'=>$props{'xaxis-line'},'format'=>$props{'yaxis-format'},'n'=>4,'left'=>$left,'right'=>$right,'bottom'=>$bottom,'top'=>$top,'axis-lines'=>$props{'yaxis-lines'},'width'=>$w,'height'=>$h,'xmin'=>$minyr,'xmax'=>$maxyr,'ymin'=>$miny,'ymax'=>$maxy));

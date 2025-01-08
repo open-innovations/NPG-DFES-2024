@@ -6,7 +6,7 @@
 		"csv":"TotalNumberOfEVs.csv",
 		"svg":"graph-ev.svg",
 		"yaxis-label": "Number",
-		"left": 120
+		"left": 110
 	},{
 		"title":"Electric vehicle penetration of total car stock (%)",
 		"csv":"ElectricVehiclePenetrationOfTotalCarStock_percent.csv",
@@ -51,7 +51,7 @@
 		"svg":"graph-annual-peak-demand.svg",
 		"tooltip":"{{x}}: {{y}} GW",
 		"yaxis-label": "Annual peak demand (GW)",
-		"left": 100
+		"left": 50
 	},{
 		"title":"Network peak demand breakdown - NPg Reference Scenario (GW)",
 		"csv":"NetworkAnnualGrossPeakDemandBreakdown_NPgBestView_GW.csv",
@@ -65,21 +65,21 @@
 		"svg":"graph-energy-consumption-breakdown.svg",
 		"tooltip":"{{x}}: {{y}} TWh",
 		"yaxis-label": "Network energy consumption (TWh)",
-		"left": 70
+		"left": 60
 	},{
 		"title":"Annual network energy consumption (TWh)",
 		"csv":"AnnualNetworkEnergyConsumption_TWh.csv",
 		"svg":"graph-annual-energy-consumption.svg",
 		"tooltip":"{{x}}: {{y}} TWh",
 		"yaxis-label": "Energy consumption (TWh)",
-		"left": 70
+		"left": 60
 	},{
 		"title":"Network annual fuel consumption breakdown - NPg Planning Scenario (GWh-yr)",
 		"csv":"NetworkAnnualFuelConsumptionBreakdown_NPgPlanningScenario_GWh-yr.csv",
 		"svg":"graph-fuel-consumption-planning-scenario.svg",
 		"tooltip":"{{x}}: {{y}} GWh-yr",
 		"yaxis-label": "Fuel consumption (GWh-yr)",
-		"left": 100
+		"left": 60
 	},{
 		"title":"Additional industrial peak demand breakdown - NPg Reference Scenario (MW)",
 		"csv":"IndustryAdditionalPeakDemandBreakdown_NPgBestView_MW.csv",
