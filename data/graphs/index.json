@@ -46,7 +46,7 @@
 },{
 	"title": "Network data",
 	"graphs": [{
-		"title":"Annual peak demand (with ToUT)(GW)",
+		"title":"Annual peak demand (with ToUT) (GW)",
 		"csv":"AnnualPeakDemand_GW.csv",
 		"svg":"graph-annual-peak-demand.svg",
 		"tooltip":"{{x}}: {{y}} GW",
