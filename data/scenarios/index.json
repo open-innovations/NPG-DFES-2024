@@ -1,6 +1,6 @@
 {
 	"Counterfactual": {
-		"description": "<ul><li>Does not meet net zero by 2050</li><li>Slowest decarbonisation effort with heavy reliance on gas across all sectors</li></ul>",
+		"description": "<ul><li>Does not meet net zero by 2050</li><li>Slowest decarbonisation effort</li><li>Heavy reliance on gas across all sectors</li></ul>",
 		"color": "#454546",
 		"negativecolor": "#d7191c",
 		"css": "counterfactual",
