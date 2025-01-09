@@ -74,13 +74,6 @@
 		"yaxis-label": "Energy consumption (TWh)",
 		"left": 60
 	},{
-		"title":"Network annual fuel consumption breakdown - NPg Planning Scenario (GWh-yr)",
-		"csv":"NetworkAnnualFuelConsumptionBreakdown_NPgPlanningScenario_GWh-yr.csv",
-		"svg":"graph-fuel-consumption-planning-scenario.svg",
-		"tooltip":"{{x}}: {{y}} GWh-yr",
-		"yaxis-label": "Fuel consumption (GWh-yr)",
-		"left": 60
-	},{
 		"title":"Additional industrial peak demand breakdown - NPg Reference Scenario (MW)",
 		"csv":"IndustryAdditionalPeakDemandBreakdown_NPgReferenceScenario_MW.csv",
 		"svg":"graph-industry-additional-peak-demand-planning-scenario.svg",
@@ -94,26 +87,5 @@
 		"svg":"graph-industry-additional-energy-consumption-planning-scenario.svg",
 		"yaxis-label": "Energy consumption (TWh)",
 		"left": 80
-	},{
-		"title": "Annual carbon emissions (MtCO2)",
-		"csv":"AnnualCarbonEmissions_MtCO2.csv",
-		"svg":"graph-annual-co2-emissions.svg",
-		"tooltip":"{{x}}: {{y}} MtCO2",
-		"yaxis-label": "Mt CO2(e)",
-		"left": 50
-	},{
-		"title":"Cumulative carbon emissions (MtCO2)",
-		"csv":"CumulativeCarbonEmissions_MtCO2.csv",
-		"svg":"graph-cumulative-carbon-emissions.svg",
-		"tooltip":"{{x}}: {{y}} MtCO2",
-		"yaxis-label": "Cumulative emissions (MtCO2)",
-		"left": 70
-	},{
-		"title":"Network annual carbon emission breakdown - Planning Scenario (MtCO2)",
-		"csv":"NetworkAnnualCarbonEmissionBreakdown_NPgPlanningScenario_MtCO2.csv",
-		"svg":"graph-annual-carbon-emissions-planning-scenario.svg",
-		"tooltip":"{{x}}: {{y}} MtCO2",
-		"yaxis-label": "Annual emissions (MtCO2)",
-		"left": 50
 	}]
 }]
