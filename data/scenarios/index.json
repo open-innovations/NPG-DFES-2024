@@ -1,6 +1,6 @@
 {
 	"Counterfactual": {
-		"description": "<ul><li>Does not achieve 80% decarbonisation by 2050.<ul><li>Minimal behaviour change.</li><li>Decarbonisation in power and transport but not heat.</li></ul></li></ul>",
+		"description": "<ul><li>Does not meet net zero by 2050</li><li>Slowest decarbonisation effort with heavy reliance on gas across all sectors</li></ul>",
 		"color": "#454546",
 		"negativecolor": "#d7191c",
 		"css": "counterfactual",
@@ -24,7 +24,7 @@
 		}
 	},
 	"Hydrogen Evolution": {
-		"description": "<ul><li>Achieves 100% decarbonisation by 2050.<ul><li>Hydrogen for heating.</li><li>Consumers less inclined to change behaviour.</li><li>Lower energy efficiency.</li><li>Supply side flexibility</li></ul></li></ul>",
+		"description": "<ul><li>Net zero compliant to 2050 target</li><li>Energy system adapted for hydrogen use</li><li>Hydrogen used in heating and industry</li></ul>",
 		"color": "#0079C1",
 		"negativecolor": "#d7191c",
 		"css": "hydrogen-evolution",
@@ -48,7 +48,7 @@
 		}
 	},
 	"Electric Engagement": {
-		"description": "<ul><li>Achieves 100% decarbonisation by 2050.<ul><li>Electrified heating.</li><li>Consumers willing to change behaviour.</li><li>High energy efficiency.</li><li>Demand side flexibility.</li></ul></li></ul>",
+		"description": "<ul><li>Net zero compliant to 2050 target</li><li>Electricity is the main energy source for heating</li></ul>",
 		"color": "#F26522",
 		"negativecolor": "#5e3c99",
 		"css": "electric-engagement",
@@ -72,7 +72,7 @@
 		}
 	},
 	"Holistic Transition": {
-		"description": "<ul><li>Achieves 100% decarbonisation by 2047.<ul><li>Fastest credible decarbonisation</li><li>Significant lifestyle change.</li><li>Mixture of hydrogen and electrification for heating.</li></ul></li></ul>",
+		"description": "<ul><li>Net zero compliant to 2050 target</li><li>Heating primarily through electricity</li><li>Hydrogen used around industrial clusters</li><li>Smart homes and electric vehicles provide grid flexibility</li></ul>",
 		"color": "#C2CD23",
 		"negativecolor": "#d01c8b",
 		"css": "holistic-transition",
@@ -96,7 +96,7 @@
 		}
 	},
 	"NPg Reference Scenario": {
-		"description": "<ul><li>Reaches net zero earlier than Government ascribed 2050 target (by the late 2040s)<ul><li>Highly accelerated electric heat & transport.</li><li>Highly decentralised distributed wind, solar & other renewable generation.</li></ul></li></ul>",
+		"description": "<ul><li>Net zero compliant to 2050 target</li><li>Accelerated uptake of electric vehicles</li><li>Early adoption of heat pumps</li></ul>",
 		"color": "#ab1236",
 		"css": "reference-scenario",
 		"data": {
