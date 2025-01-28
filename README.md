@@ -1,6 +1,6 @@
 # Northern Powergrid Future Energy Scenarios 2024
 
-**This directory contains a prototype tool and none of the data should be taken as real or representative of the scenarios listed.**
+**THIS HAS BEEN ARCHIVED. DO NOT UPDATE THIS REPO. Please do any further edits in [the main repo](https://github.com/odileeds/northern-powergrid).**
 
 ## About this visualisation
 
